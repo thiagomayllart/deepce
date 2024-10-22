@@ -814,7 +814,7 @@ findInterestingFiles() {
   printResultLong "Interesting files in root ..........." "$interestingFiles"
 
   # Any secrets in root dir files
-  result=$(grep -Iins --exclude="deepce.sh" "$GREP_SECRETS" /*)
+  result=$(grep -Iins "$GREP_SECRETS" /*)
 
   printResultLong "Passwords in common files ..........." "$result"
 
